@@ -342,7 +342,6 @@ namespace TimeAndTimePeroidLib
         /// Added override for GetHashCode()
         /// </summary>
         public override int GetHashCode() => Seconds.GetHashCode();
-        
     }
     #endregion 
 
