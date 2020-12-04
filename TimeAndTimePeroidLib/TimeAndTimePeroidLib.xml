@@ -1,0 +1,244 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TimeAndTimePeroidLib</name>
+    </assembly>
+    <members>
+        <member name="T:TimeAndTimePeroidLib.Time">
+            <summary>
+            Struct Time with implemented interfaces: IEquatable, IComparable
+            </summary>
+        </member>
+        <member name="P:TimeAndTimePeroidLib.Time.Hours">
+            <summary>
+            Added variables
+            <param name="Hours"></param>
+            <param name="Minutes"></param>
+            <param name="Seconds"></param>
+            </summary>
+        </member>
+        <member name="M:TimeAndTimePeroidLib.Time.#ctor(System.Byte,System.Byte,System.Byte)">
+            <summary>
+            Added constructor with exception
+            </summary>
+            <param name="h"></param>
+            <param name="m"></param>
+            <param name="s"></param>
+            <exception cref="T:System.ArgumentException"> Throw exception if time data is incorrect </exception>
+        </member>
+        <member name="M:TimeAndTimePeroidLib.Time.ConvertTimeToSeconds(TimeAndTimePeroidLib.Time)">
+            <summary>
+            Added converter: time -> seconds
+            </summary>
+            <param name="time"></param>
+            <returns> Time in seconds </returns>
+        </member>
+        <member name="M:TimeAndTimePeroidLib.Time.#ctor(System.String)">
+            <summary>
+            Added constructor for string
+            </summary>
+            <param name="time"></param>
+        </member>
+        <member name="M:TimeAndTimePeroidLib.Time.ToString">
+            <summary>
+            Added override for ToString()
+            </summary>
+            <returns> Time representation: HH:MM:SS </returns>
+        </member>
+        <member name="M:TimeAndTimePeroidLib.Time.Equals(TimeAndTimePeroidLib.Time)">
+            <summary>
+            Added check if times are equals
+            </summary>
+            <param name="other"></param>
+            <returns> True if they are equal, false if not </returns>
+        </member>
+        <member name="M:TimeAndTimePeroidLib.Time.Equals(System.Object)">
+            <summary>
+            Override Equals
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="M:TimeAndTimePeroidLib.Time.CompareTo(TimeAndTimePeroidLib.Time)">
+            <summary>
+            Added compare for two times
+            </summary>
+            <param name="other"></param>
+        </member>
+        <member name="M:TimeAndTimePeroidLib.Time.op_Equality(TimeAndTimePeroidLib.Time,TimeAndTimePeroidLib.Time)">
+            <summary>
+            Added operator ==
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+        </member>
+        <member name="M:TimeAndTimePeroidLib.Time.op_Inequality(TimeAndTimePeroidLib.Time,TimeAndTimePeroidLib.Time)">
+            <summary>
+            Added operator !=
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:TimeAndTimePeroidLib.Time.op_LessThan(TimeAndTimePeroidLib.Time,TimeAndTimePeroidLib.Time)" -->
+        <!-- Badly formed XML comment ignored for member "M:TimeAndTimePeroidLib.Time.op_LessThanOrEqual(TimeAndTimePeroidLib.Time,TimeAndTimePeroidLib.Time)" -->
+        <member name="M:TimeAndTimePeroidLib.Time.op_GreaterThan(TimeAndTimePeroidLib.Time,TimeAndTimePeroidLib.Time)">
+            <summary>
+            Added operator >
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+        </member>
+        <member name="M:TimeAndTimePeroidLib.Time.op_GreaterThanOrEqual(TimeAndTimePeroidLib.Time,TimeAndTimePeroidLib.Time)">
+            <summary>
+            Added operator >=
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+        </member>
+        <member name="M:TimeAndTimePeroidLib.Time.op_Addition(TimeAndTimePeroidLib.Time,TimeAndTimePeroidLib.TimePeriod)">
+            <summary>
+            Added operator +
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+        </member>
+        <member name="M:TimeAndTimePeroidLib.Time.Plus(TimeAndTimePeroidLib.TimePeriod)">
+            <summary>
+            Added method that allows  for operation on time (modulo)
+            </summary>
+            <param name="timeperiod"></param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:TimeAndTimePeroidLib.Time.Plus(TimeAndTimePeroidLib.Time,TimeAndTimePeroidLib.TimePeriod)" -->
+        <member name="M:TimeAndTimePeroidLib.Time.GetHashCode">
+            <summary>
+            Added override for GetHashCode()
+            </summary>
+        </member>
+        <member name="T:TimeAndTimePeroidLib.TimePeriod">
+            <summary>
+            Struct TimePeriod with interfaces: IEquatable, IComparable
+            </summary>
+        </member>
+        <member name="P:TimeAndTimePeroidLib.TimePeriod.Seconds">
+            <summary>
+            Added variable
+            <param name="Seconds"></param>
+            </summary>
+        </member>
+        <member name="M:TimeAndTimePeroidLib.TimePeriod.#ctor(System.Byte,System.Byte,System.Byte)">
+            <summary>
+            Added constructor with exception
+            </summary>
+            <param name="hour"></param>
+            <param name="minutes"></param>
+            <param name="seconds"></param>
+            <exception cref="T:System.ArgumentException"> Throw exception if time data is incorrect </exception>
+        </member>
+        <member name="M:TimeAndTimePeroidLib.TimePeriod.#ctor(System.Int64)">
+            <summary>
+            Added constructor
+            </summary>
+            <param name="seconds"></param>
+        </member>
+        <member name="M:TimeAndTimePeroidLib.TimePeriod.ConvertTimeToSeconds(TimeAndTimePeroidLib.Time)">
+            <summary>
+            Added converter: time -> seconds
+            </summary>
+            <param name="time"></param>
+            <returns> Time in seconds </returns>
+        </member>
+        <member name="M:TimeAndTimePeroidLib.TimePeriod.#ctor(System.String)">
+            <summary>
+            Added constructor for string
+            </summary>
+            <param name="timeperiod"></param>
+        </member>
+        <member name="M:TimeAndTimePeroidLib.TimePeriod.#ctor(TimeAndTimePeroidLib.Time,TimeAndTimePeroidLib.Time)">
+            <summary>
+            Added difference converter for 2 times to seconds
+            </summary>
+            <param name="t1"></param>
+            <param name="t2"></param>
+        </member>
+        <member name="M:TimeAndTimePeroidLib.TimePeriod.ToString">
+            <summary>
+            Added override for ToString()
+            </summary>
+            <returns> Time representation: HH:MM:SS </returns>
+        </member>
+        <member name="M:TimeAndTimePeroidLib.TimePeriod.Equals(TimeAndTimePeroidLib.TimePeriod)">
+            <summary>
+            Added check if time periods are equals
+            </summary>
+            <param name="other"></param>
+            <returns> True if they are equal, false if not </returns>
+        </member>
+        <member name="M:TimeAndTimePeroidLib.TimePeriod.Equals(System.Object)">
+            <summary>
+            Override Equals
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="M:TimeAndTimePeroidLib.TimePeriod.CompareTo(TimeAndTimePeroidLib.TimePeriod)">
+            <summary>
+            Added compare for two time periods
+            </summary>
+            <param name="other"></param>
+        </member>
+        <member name="M:TimeAndTimePeroidLib.TimePeriod.op_Equality(TimeAndTimePeroidLib.TimePeriod,TimeAndTimePeroidLib.TimePeriod)">
+            <summary>
+            Added operator ==
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+        </member>
+        <member name="M:TimeAndTimePeroidLib.TimePeriod.op_Inequality(TimeAndTimePeroidLib.TimePeriod,TimeAndTimePeroidLib.TimePeriod)">
+            <summary>
+            Added operator !=
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:TimeAndTimePeroidLib.TimePeriod.op_LessThan(TimeAndTimePeroidLib.TimePeriod,TimeAndTimePeroidLib.TimePeriod)" -->
+        <!-- Badly formed XML comment ignored for member "M:TimeAndTimePeroidLib.TimePeriod.op_LessThanOrEqual(TimeAndTimePeroidLib.TimePeriod,TimeAndTimePeroidLib.TimePeriod)" -->
+        <member name="M:TimeAndTimePeroidLib.TimePeriod.op_GreaterThan(TimeAndTimePeroidLib.TimePeriod,TimeAndTimePeroidLib.TimePeriod)">
+            <summary>
+            Added operator >
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TimeAndTimePeroidLib.TimePeriod.op_GreaterThanOrEqual(TimeAndTimePeroidLib.TimePeriod,TimeAndTimePeroidLib.TimePeriod)">
+            <summary>
+            Added operator >=
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+        </member>
+        <member name="M:TimeAndTimePeroidLib.TimePeriod.op_Addition(TimeAndTimePeroidLib.TimePeriod,TimeAndTimePeroidLib.TimePeriod)">
+            <summary>
+            Added operator +
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+        </member>
+        <member name="M:TimeAndTimePeroidLib.TimePeriod.Plus(TimeAndTimePeroidLib.TimePeriod)">
+            <summary>
+            Added method that allows for operation on time peroid
+            </summary>
+            <param name="timeperiod"></param>
+        </member>
+        <member name="M:TimeAndTimePeroidLib.TimePeriod.Plus(TimeAndTimePeroidLib.TimePeriod,TimeAndTimePeroidLib.TimePeriod)">
+            <summary>
+            Added static method that allows for operation on two time peroids
+            </summary>
+            <param name="timeperiod1"></param>
+            <param name="timeperiod2"></param>
+        </member>
+        <member name="M:TimeAndTimePeroidLib.TimePeriod.GetHashCode">
+            <summary>
+            Added override for GetHashCode()
+            </summary>
+        </member>
+    </members>
+</doc>
