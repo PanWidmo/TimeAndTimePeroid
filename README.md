@@ -13,8 +13,6 @@ Zaprogramuj, korzystając z notatek do wykładów, **wzajemnie powiązane ze sob
 ### Struktura `Time`
 
 * zmienna typu `Time` opisuje punkt w czasie, w przedziale `00:00:00 … 23:59:59` (weź pod uwagę arytmetykę modulo w godzinach `%24` oraz minutach i sekundach `%60` -- wtedy, kiedy to będzie sensowne i wymagane)
-  
-    ![Time & TimePeriod](TimePeriod.png)
 
 * wewnętrzną reprezentacją czasu są pola typu `byte`: `Hours`, `Minutes`, `Seconds` – zrealizuj je jako properties,
 
